@@ -43,7 +43,7 @@ MD_total = ((Dev + QA + Arch + PM) × FocusFactor) × (1 + RiskFactor) + (CommBu
 
 ## 🚀 Live Demo
 
-[**Try MD Estimator →**](https://your-demo-url.com)
+[**Try MD Estimator →**](https://ponomarenko.github.io/project-effort-calculator)
 
 ## 🛠️ Tech Stack
 
