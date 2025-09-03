@@ -32,7 +32,7 @@ const App = () => {
   const [qaPercentage, setQaPercentage] = useState(30);
   const [chartType, setChartType] = useState("pie"); // 'pie' or 'bar'
 
-  // Автоматичний перерахунок QA
+  // Automatic QA recalculation
   useEffect(() => {
     if (useAutoQA) {
       setInputs((prev) => ({
@@ -42,14 +42,14 @@ const App = () => {
     }
   }, [useAutoQA, qaPercentage, inputs.dev]);
 
-  // Розрахунки
+  // Calculations
   const baseMD = inputs.dev + inputs.qa + inputs.arch + inputs.pm;
   const coreEffort = baseMD * coefficients.focusFactor;
   const riskBuffer = coreEffort * coefficients.riskFactor;
   const commBufferMD = baseMD * coefficients.commBuffer;
   const totalMD = coreEffort + riskBuffer + commBufferMD;
 
-  // Дані для графіка
+  // Data for the charts
   const pieData = [
     {
       name: "Development",
